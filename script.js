@@ -18,9 +18,9 @@ const p4 = document.querySelector("#b p"); //Selecting p class in section with i
 //Styling modify test
 p4.style.backgroundColor = "green";
 
-const li2 = document.querySelector("section#b ul li:nth-child(2)");
+//const li2 = document.querySelector("section#b ul li:nth-child(2)");
 //Styling modify test
-li2.innerHTML = "Paragraf ini telah diubah melalui querySelector yang spesifik";
+//li2.innerHTML = "Paragraf ini telah diubah melalui querySelector yang spesifik";
 
 const qsp = document.querySelectorAll("p"); //Return --> Nodelist(array)
 //Styling modify test
@@ -41,3 +41,16 @@ newP.appendChild(textP); //Appending created text into the paragraph
 //Putting newP into a specified section in the document
 const sectionA = document.getElementById("a");
 sectionA.appendChild(newP);
+
+//Creating new element for a speific tag order
+const newLi = document.createElement("li");
+const textLi = document.createTextNode("Item ini baru ditambahkan");
+
+newLi.appendChild(textLi);
+
+//Putting new element below section b's li first child
+//--> Finding the exact location
+const ul = document.querySelector("section#b ul");
+const li2 = ul.querySelector("li:nth-child(2)");
+//--> Inserting the new element into li2
+ul.insertBefore(newLi, li2);
