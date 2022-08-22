@@ -54,3 +54,4 @@ const ul = document.querySelector("section#b ul");
 const li2 = ul.querySelector("li:nth-child(2)");
 //--> Inserting the new element into li2
 ul.insertBefore(newLi, li2);
+//Theres still alot of methods able to perform such as replacing, removing, etcetera.
